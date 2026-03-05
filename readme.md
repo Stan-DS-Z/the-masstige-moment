@@ -12,8 +12,8 @@ data wrangling, and business analysis skills.
 
 ## Hypothesis
 > Masstige beauty is outperforming both luxury and mass segments (2022–present), 
-> driven by a more discerning, aspirational consumer who prioritises functionality 
-> at a justified price point.
+> driven by a more discerning, aspirational consumer who enjoys premium products
+> at accessible pricing.
 
 ## Verdict: Confirmed ✓
 
