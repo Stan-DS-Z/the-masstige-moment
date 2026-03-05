@@ -19,6 +19,17 @@ data wrangling, and business analysis skills.
 
 > **Masstige beauty outperforms all tiers on revenue growth (CAGR 14.67%) and leads or ranks #2 across every sentiment dimension — across English and Japanese markets, across YouTube and purchase-intent review platforms.**
 ---
+
+### Overall
+
+<p align="center">
+  <img src="data/figures/05_synthesis_scorecard.png" width="700">
+</p>
+
+<p align="center">
+  <img src="data/figures/05_radar_chart.png" width="700">
+</p>
+
 ## Key Findings
 
 | Metric | Luxury | Prestige | **Masstige** | Mass |
