@@ -1,0 +1,12 @@
+{
+  "pulled_at": "2026-03-05T12:33:48.108731",
+  "total_comments": 6599,
+  "date_range_min": "2021-07-07T14:13:09+00:00",
+  "date_range_max": "2026-03-03T09:00:56+00:00",
+  "tier_counts": {
+    "Luxury": 1946,
+    "Prestige": 1748,
+    "Mass": 1698,
+    "Masstige": 1207
+  }
+}

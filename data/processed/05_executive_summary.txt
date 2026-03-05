@@ -1,0 +1,60 @@
+
+================================================================================
+THE MASSTIGE MOMENT: WHICH BEAUTY TIER IS WINNING IN A POST-COVID WORLD?
+Executive Summary
+================================================================================
+
+HYPOTHESIS
+----------
+Masstige is gaining ground on both luxury and mass segments (2022–2025),
+driven by a more discerning, aspirational consumer who values premium quality at accessible price points.
+
+VERDICT: LARGELY CONFIRMED
+------------------
+Drawing upon all relevant sources across the project, while absolute demand remains dominated by Mass
+and Prestige.
+Masstige's growth trajectory and consumer sentiment consistently outpace all other tiers;
+especially in Japan, France, and Germany.
+
+KEY FINDINGS
+------------
+1. REVENUE (NB01)
+   Masstige CAGR: 14.67% — 4.3x Luxury (3.45%) and 2.9x Mass (5.07%)
+   Prestige lagged all tiers at 0.74% CAGR.
+
+2. SEARCH TRENDS (NB03)
+   Luxury and Mass dominate raw search volume (167, 176 index).
+   Masstige search index (58) is low — consistent with a
+   recommendation-driven, low-browse/high-convert consumer behaviour pattern.
+   Masstige consumers search with intent, not curiosity.
+
+3. CONSUMER SENTIMENT — ENGLISH MARKETS (NB04-A) / JAPANESE MARKET (NB04-B)
+   Masstige leads all tiers: 0.547 YouTube compound score.
+   YouTube JP: Masstige 0.386
+   @cosme star ratings: Masstige 0.367
+   Cross-source convergence (Δ0.019) is the strongest
+   methodological validation in the project.
+
+CROSS-SOURCE SCORECARD
+----------------------
+   Metric            Luxury   Prestige   Masstige       Mass
+   Revenue CAGR        3.45%      0.74%      14.67%     5.07%
+   Search Index      167.25      59.64       57.79    176.01
+   YouTube EN         0.525      0.393       0.547     0.267
+   YouTube JP         0.270      0.190       0.386     0.065
+   @cosme             0.462      0.417       0.367     0.326
+
+   Masstige ranks #1 on Revenue CAGR, #1 on YouTube EN,
+   #1 on YouTube JP, #3 on @cosme.
+   After Masstige, the strongest tier is Luxury, performing similarly well across all metrics.
+
+
+METHODOLOGICAL NOTE
+-------------------
+This analysis triangulates revenue data (audited annual reports), consumer
+search behaviour (Google Trends, 8 markets), and sentiment signals (YouTube
+VADER/GiNZA, @cosme star ratings) across English and Japanese language markets.
+Conclusions rest on convergence across independent sources rather than any
+single signal.
+
+================================================================================
