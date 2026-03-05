@@ -161,6 +161,10 @@ This project is designed to demonstrate analytical capability to:
 - **Investor / BD functions** (LVMH, L'Oréal) — revenue growth signals and portfolio implications
 - **Consulting and analytics recruiters** — end-to-end project structure, multi-source triangulation, hypothesis-driven narrative
 
+## Data Ethics Note
+
+All data sources used in this project are publicly available. YouTube comments and @cosme reviews were analysed in aggregate for sentiment trends. No personal identifiers or user profiles are stored or redistributed.
+
 ---
 
 ## Author
