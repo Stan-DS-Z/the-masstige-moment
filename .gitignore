@@ -10,6 +10,7 @@ secrets.py
 
 # Cached data (large files, no need to push)
 data/processed/*.pkl
+data/cached/
 
 # Python cache
 __pycache__/

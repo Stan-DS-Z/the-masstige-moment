@@ -1,0 +1,31 @@
+
+OBSERVATIONS CLÉS — LA BEAUTÉ FRANÇAISE VUE PAR LA DATA
+=========================================================
+
+1. LA MASSE CHERCHE, LE LUXE NE CHERCHE PAS
+   • Les marques Mass dominent les recherches Google avec un indice moyen de 58.4,
+     soit 17 fois plus que le Luxe (3.3).
+   • Ce n'est pas un signe de faiblesse du Luxe : c'est une signature de maturité.
+   • Le consommateur de Dior ou Guerlain n'a pas besoin de chercher — il sait déjà.
+
+2. LE LUXE INSPIRE, LA MASSE DÉÇOIT
+   • Sur YouTube, le Luxe obtient le meilleur sentiment pondéré (0.471).
+   • La Mass tombe à quasi zéro (0.003) une fois pondéré par les likes :
+     les commentaires les plus appréciés sont critiques, pas enthousiastes.
+   • Les Français aiment partager leur déception sur les grandes marques accessibles.
+
+3. LA PHARMACIE TIENT SES PROMESSES
+   • Sur Beauté-Test, le Masstige obtient 0.532 — très proche
+     du Prestige (0.557).
+   • Le canal pharmacie délivre une satisfaction produit qui rivalise
+     avec des marques deux fois plus chères.
+
+4. PRESTIGE ET MASSTIGE : UN ÉCART QUI SE RESSERRE
+   • Sur YouTube, l'écart de sentiment entre Prestige et Masstige est de -0.042 points.
+   • Sur Beauté-Test, il est de 0.025 points.
+   • La frontière entre ces deux tiers s'efface dans l'esprit du consommateur français.
+
+5. TROIS SIGNAUX, ZÉRO CONSENSUS
+   • La Mass mène la recherche. Le Luxe mène le sentiment vidéo et les avis produits.
+   • Aucun tier ne domine sur tous les fronts — ce qui confirme que le marché français
+     est segmenté non pas par prix, mais par usage, canal et moment d'achat.

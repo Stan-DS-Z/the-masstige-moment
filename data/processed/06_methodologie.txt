@@ -1,0 +1,42 @@
+
+MÉTHODOLOGIE — NB06 ANALYSE DU MARCHÉ FRANÇAIS
+================================================
+
+PÉRIMÈTRE
+   • Période : janvier 2022 – décembre 2025
+   • Marché : France (geo=FR, langue=fr)
+   • Tiers : Luxe (4 marques), Prestige (4 marques),
+             Masstige (5 marques), Mass (3 marques)
+   • Extension locale : L'Occitane (Prestige), Nuxe et Avène (Masstige)
+     ajoutés au panier global pour refléter la spécificité du marché français.
+
+SIGNAL 1 — TENDANCES DE RECHERCHE (Google Trends)
+   • Outil : pytrends, geo=FR, rééchantillonnage mensuel
+   • Normalisation : ancre "soin visage" injectée dans chaque batch ;
+     scores calibrés au moment de la collecte (score / moyenne_ancre × 100)
+   • Agrégation : moyenne inter-keywords par tier, puis moyenne mensuelle
+
+SIGNAL 2 — SENTIMENT YOUTUBE FR
+   • Collecte : API YouTube Data v3, requêtes en français, regionCode=FR
+   • Modèle : DistilCamemBERT (cmarkea/distilcamembert-base-sentiment)
+     modèle natif français, sortie 1–5 étoiles convertie en score −1 → +1
+   • Pondération : score pondéré par le nombre de likes par commentaire
+     (les commentaires les plus appréciés ont plus de poids)
+
+SIGNAL 3 — AVIS BEAUTÉ-TEST
+   • Source : beaute-test.com — plateforme française d'avis beauté
+   • Résolution des marques : index complet scraté (/marques),
+     correspondance fuzzy (SequenceMatcher) puis validation manuelle
+   • Agrégation : moyenne des notes étoiles pondérée par n_produits par marque,
+     convertie en score −1 → +1 via (étoiles − 3) / 2
+
+LIMITES
+   • Google Trends : indices relatifs, non absolus — comparaisons inter-tiers
+     valides mais non comparables aux données NB03 (anchor différente)
+   • YouTube : volume de commentaires inégal par tier ; likes peu nombreux
+     en FR vs EN — pondération plus bruitée
+   • Beauté-Test : plateforme de niche, surreprésentation possible des
+     consommatrices engagées ; Mass sous-représenté (3 marques seulement)
+   • Clarins et L'Occitane sont des entreprises privées — absence de données
+     financières comparables ; inclus pour la pertinence du signal consommateur
+   • NB06 est une analyse de signal consommateur, non une analyse financière

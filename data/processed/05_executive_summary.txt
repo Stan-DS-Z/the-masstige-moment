@@ -13,8 +13,9 @@ VERDICT: LARGELY CONFIRMED
 ------------------
 Drawing upon all relevant sources across the project, while absolute demand remains dominated by Mass
 and Prestige.
-Masstige's growth trajectory and consumer sentiment consistently outpace all other tiers;
-especially in Japan, France, and Germany.
+Masstige's growth trajectory and consumer sentiment consistently outpace all other tiers.
+Search and sentiment signals converge most strongly in Japan and France, 
+where pharmacie and premium skincare channels give Masstige structural advantages.
 
 KEY FINDINGS
 ------------
@@ -23,8 +24,8 @@ KEY FINDINGS
    Prestige lagged all tiers at 0.74% CAGR.
 
 2. SEARCH TRENDS (NB03)
-   Luxury and Mass dominate raw search volume (167, 176 index).
-   Masstige search index (58) is low — consistent with a
+   Luxury and Mass dominate raw search volume (31, 43 index).
+   Masstige search index (24) is low — consistent with a
    recommendation-driven, low-browse/high-convert consumer behaviour pattern.
    Masstige consumers search with intent, not curiosity.
 
@@ -39,7 +40,7 @@ CROSS-SOURCE SCORECARD
 ----------------------
    Metric            Luxury   Prestige   Masstige       Mass
    Revenue CAGR        3.45%      0.74%      14.67%     5.07%
-   Search Index      167.25      59.64       57.79    176.01
+   Search Index       31.24      27.04       24.01     42.68
    YouTube EN         0.525      0.393       0.547     0.267
    YouTube JP         0.270      0.190       0.386     0.065
    @cosme             0.462      0.417       0.367     0.326
