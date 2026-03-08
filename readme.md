@@ -12,8 +12,8 @@ data wrangling, and business analysis skills.
 
 ## Hypothesis
 > Masstige beauty is outperforming both luxury and mass segments (2022–present), 
-> driven by a more discerning, aspirational consumer who prioritises functionality 
-> at a justified price point.
+> driven by a more discerning, aspirational consumer who enjoys premium products
+> at accessible pricing.
 
 ## Verdict: Confirmed ✓
 
@@ -160,6 +160,10 @@ This project is designed to demonstrate analytical capability to:
 - **Brand strategy teams** (Kao, Shiseido, L'Oréal Japan) — actionable tier and market intelligence
 - **Investor / BD functions** (LVMH, L'Oréal) — revenue growth signals and portfolio implications
 - **Consulting and analytics recruiters** — end-to-end project structure, multi-source triangulation, hypothesis-driven narrative
+
+## Data Ethics Note
+
+All data sources used in this project are publicly available. YouTube comments and @cosme reviews were analysed in aggregate for sentiment trends. No personal identifiers or user profiles are stored or redistributed.
 
 ---
 
