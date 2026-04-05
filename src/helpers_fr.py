@@ -1,28 +1,58 @@
 # -*- coding: utf-8 -*-
-# ── helpers_fr.py ─────────────────────────────────────────
-# Configuration spécifique au marché français — NB06
+# src/helpers_fr.py
+# ── France-market configuration — NB06 only ───────────────────────────────────
+#
+# Design principle: this file extends helpers.py, it does NOT redefine it.
+# - Canonical colours, save_chart, add_source, add_subtitle, weighted_sentiment,
+#   FIG_*, BACKGROUND, SOURCE_LABEL are all imported from helpers.py
+# - This file only defines what is genuinely France-specific:
+#   French tier names, colour aliases, brand lists, keyword lists, batch helper
+#
+# If a tier colour changes in helpers.py, it automatically propagates here.
 
-import matplotlib.pyplot as plt
+from src.helpers import (
+    TIER_COLOURS,
+    set_style,
+    apply_grid,
+    save_chart,
+    add_source,
+    add_subtitle,
+    weighted_sentiment,
+    FIG_STANDARD,
+    FIG_WIDE,
+    FIG_SQUARE,
+    FIG_DOUBLE,
+    BACKGROUND,
+)
 
-# ── Couleurs par tier ─────────────────────────────────────
-TIER_COULEURS_FR = {
-    "Luxe":      "#1C1C2E",
-    "Prestige":  "#7B6FA0",
-    "Masstige":  "#A8C5A0",
-    "Mass":      "#C4956A",
-}
+# ── France-specific source label ───────────────────────────────────────────────
+SOURCE_LABEL_FR = (
+    "Source : Google Trends, API YouTube Data v3, Beauté-Test · "
+    "Stan Zaen · The Masstige Moment — Marché Français"
+)
 
+# ── French tier order ──────────────────────────────────────────────────────────
 TIER_ORDER_FR = ["Luxe", "Prestige", "Masstige", "Mass"]
 
-# ── Marques par tier ──────────────────────────────────────
-MARQUES_FR = {
-    "Luxe":      ["Dior Beauté", "Guerlain", "Givenchy Beauté", "YSL Beauté"],
-    "Prestige":  ["Lancôme", "Clarins", "Giorgio Armani Beauté", "L'Occitane"],
-    "Masstige":  ["La Roche-Posay", "Vichy", "CeraVe", "Nuxe", "Avène"],
-    "Mass":      ["L'Oréal Paris", "Garnier", "Gemey-Maybelline"],
+# ── French tier colours — mapped to canonical palette from helpers.py ──────────
+# Keys are French tier names; values are identical to TIER_COLOURS.
+# One source of truth: change helpers.py → propagates here automatically.
+TIER_COULEURS_FR = {
+    "Luxe":     TIER_COLOURS["Luxury"],    # deep navy   #1a1a2e
+    "Prestige": TIER_COLOURS["Prestige"],  # deep violet #6b3fa0
+    "Masstige": TIER_COLOURS["Masstige"],  # deep teal   #2a7d6e
+    "Mass":     TIER_COLOURS["Mass"],      # neutral grey #a8a8a8
 }
 
-# ── Mots-clés Google Trends (geo=FR) ─────────────────────
+# ── Marques par tier (France basket) ──────────────────────────────────────────
+MARQUES_FR = {
+    "Luxe":     ["Dior Beauté", "Guerlain", "Givenchy Beauté", "YSL Beauté"],
+    "Prestige": ["Lancôme", "Clarins", "Giorgio Armani Beauté", "L'Occitane"],
+    "Masstige": ["La Roche-Posay", "Vichy", "CeraVe", "Nuxe", "Avène"],
+    "Mass":     ["L'Oréal Paris", "Garnier", "Gemey-Maybelline"],
+}
+
+# ── Mots-clés Google Trends (geo=FR) ──────────────────────────────────────────
 KEYWORDS_TRENDS_FR = {
 
     "Luxe": {
@@ -100,29 +130,34 @@ KEYWORDS_TRENDS_FR = {
     },
 }
 
-# ── Mots-clés YouTube (langue française) ─────────────────
+# ── Mots-clés YouTube (langue française) ──────────────────────────────────────
 KEYWORDS_YOUTUBE_FR = {
-    "Luxe":      ["Dior beauté routine", "Guerlain soin visage", "YSL maquillage avis"],
-    "Prestige":  ["Lancôme routine soin", "Clarins crème test", "L'Occitane avis soin"],
-    "Masstige":  ["La Roche-Posay routine", "Nuxe Huile Prodigieuse avis", "Avène soin peau sensible"],
-    "Mass":      ["L'Oréal Paris routine", "Garnier soin visage", "Gemey-Maybelline test avis"],
+    "Luxe":     ["Dior beauté routine", "Guerlain soin visage", "YSL maquillage avis"],
+    "Prestige": ["Lancôme routine soin", "Clarins crème test", "L'Occitane avis soin"],
+    "Masstige": ["La Roche-Posay routine", "Nuxe Huile Prodigieuse avis", "Avène soin peau sensible"],
+    "Mass":     ["L'Oréal Paris routine", "Garnier soin visage", "Gemey-Maybelline test avis"],
 }
 
-# ── Mots-clés Beauté-Test par marque ─────────────────────
+# ── Mots-clés Beauté-Test par marque ──────────────────────────────────────────
 KEYWORDS_BEAUTETEST_FR = {
-    "Luxe":      ["dior", "guerlain", "givenchy", "yves-saint-laurent"],
-    "Prestige":  ["lancome", "clarins", "giorgio-armani", "loccitane"],
-    "Masstige":  ["la-roche-posay", "vichy", "cerave", "nuxe", "avene"],
-    "Mass":      ["loreal-paris", "garnier", "gemey-maybelline"],
+    "Luxe":     ["dior", "guerlain", "givenchy", "yves-saint-laurent"],
+    "Prestige": ["lancome", "clarins", "giorgio-armani", "loccitane"],
+    "Masstige": ["la-roche-posay", "vichy", "cerave", "nuxe", "avene"],
+    "Mass":     ["loreal-paris", "garnier", "gemey-maybelline"],
 }
 
-# ── Batches pytrends (max 5 par requête) ─────────────────
+# ── Batch helper (pytrends — max 5 keywords per request) ──────────────────────
 def get_batches(tier_keywords, batch_size=5):
-    """Découpe une liste de mots-clés en batches de taille batch_size."""
-    all_kw = tier_keywords["marques"] + tier_keywords["comportement"]
-    return [all_kw[i:i+batch_size] for i in range(0, len(all_kw), batch_size)]
+    """
+    Split a tier's keyword dict into batches for pytrends.
+    Combines 'marques' and 'comportement' lists before chunking.
 
-# ── Fonction save_chart ───────────────────────────────────
-def save_chart(fig, filename):
-    fig.savefig(f"../data/processed/{filename}", dpi=150, bbox_inches="tight")
-    print(f"Sauvegardé : {filename}")
+    Args:
+        tier_keywords : dict with keys 'marques' and 'comportement'
+        batch_size    : int, default 5 (pytrends maximum per request)
+
+    Returns:
+        list of lists, each of length <= batch_size
+    """
+    all_kw = tier_keywords["marques"] + tier_keywords["comportement"]
+    return [all_kw[i:i + batch_size] for i in range(0, len(all_kw), batch_size)]

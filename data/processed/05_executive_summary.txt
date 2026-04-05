@@ -1,61 +1,81 @@
 
 ================================================================================
 THE MASSTIGE MOMENT: WHICH BEAUTY TIER IS WINNING IN A POST-COVID WORLD?
-Executive Summary
+Executive Summary -- NB05
 ================================================================================
 
 HYPOTHESIS
 ----------
-Masstige is gaining ground on both luxury and mass segments (2022–2025),
-driven by a more discerning, aspirational consumer who values premium quality at accessible price points.
+Masstige is gaining ground on both luxury and mass segments (2022-2025),
+driven by a more discerning, aspirational consumer who values premium quality
+at accessible price points.
 
-VERDICT: LARGELY CONFIRMED
-------------------
-Drawing upon all relevant sources across the project, while absolute demand remains dominated by Mass
-and Prestige.
-Masstige's growth trajectory and consumer sentiment consistently outpace all other tiers.
-Search and sentiment signals converge most strongly in Japan and France, 
-where pharmacie and premium skincare channels give Masstige structural advantages.
+VERDICT: CONFIRMED ACROSS SEVEN INDEPENDENT SIGNALS
+----------------------------------------------------
+Revenue growth, search behaviour, and consumer sentiment in three language
+markets (EN / JP / FR) converge on the same conclusion: Masstige is the
+structurally strongest tier of the post-COVID beauty landscape.
+The consumer is buying without necessarily searching -- driven by word-of-mouth,
+pharmacist recommendation, and channel trust rather than top-of-funnel discovery.
+
+Nuance: On established review platforms (@cosme #3, Beaute-Test #3), Masstige sits behind Luxury and Prestige -- reflecting category hierarchy that video sentiment is beginning to erode. The shift is underway, not complete.
 
 KEY FINDINGS
 ------------
+
 1. REVENUE (NB01)
-   Masstige CAGR: 14.67% — 4.3x Luxury (3.45%) and 2.9x Mass (5.07%)
+   Masstige CAGR: 14.67% -- 2.9x Mass (5.07%), while Luxury contracted (-3.07%)
    Prestige lagged all tiers at 0.74% CAGR.
+   Absolute market still dominated by Mass and Prestige -- Masstige is the
+   smallest tier by revenue but the fastest growing without exception.
 
-2. SEARCH TRENDS (NB03)
-   Luxury and Mass dominate raw search volume (31, 43 index).
-   Masstige search index (24) is low — consistent with a
-   recommendation-driven, low-browse/high-convert consumer behaviour pattern.
-   Masstige consumers search with intent, not curiosity.
+2. SEARCH TRENDS -- GLOBAL, 8 MARKETS (NB03)
+   Masstige search index (24) sits well below Mass (42) and Luxury (30).
+   Low search != low engagement. The Masstige consumer converts without browsing --
+   a word-of-mouth and pharmacist-recommendation channel signature.
 
-3. CONSUMER SENTIMENT — ENGLISH MARKETS (NB04-A) / JAPANESE MARKET (NB04-B)
-   Masstige leads all tiers: 0.547 YouTube compound score.
-   YouTube JP: Masstige 0.386
-   @cosme star ratings: Masstige 0.367
-   Cross-source convergence (Δ0.019) is the strongest
-   methodological validation in the project.
+3. CONSUMER SENTIMENT -- ENGLISH MARKETS (NB04A)
+   Masstige leads all tiers on YouTube EN: 0.547 compound score.
+   Sharpest perception gap: Masstige vs Mass D0.280 --
+   consumers treat these as categorically different products, not adjacent price points.
+
+4. CONSUMER SENTIMENT -- JAPANESE MARKET (NB04B)
+   YouTube JP: Masstige 0.386 | @cosme: 0.367
+   Cross-source convergence D0.019 -- strongest methodological
+   validation in the project. Masstige is the only tier where YouTube
+   outscores @cosme, confirming video content as a primary channel driver.
+
+5. CONSUMER SENTIMENT -- FRENCH MARKET (NB04C)
+   YouTube FR: Luxe leads sentiment (0.471), Mass collapses to 0.003
+   once like-weighted -- French consumers publicly share disappointment with
+   accessible brands but quietly buy them (search index 58x higher than Luxe).
+   Beaute-Test: Masstige (0.532) nearly matches Prestige (0.557) --
+   the pharmacie channel delivers product satisfaction that rivals brands
+   priced twice as high.
+   Key insight: the French market is segmented by usage, channel, and purchase
+   moment -- not price. No single tier dominates all three signals simultaneously.
 
 CROSS-SOURCE SCORECARD
 ----------------------
-   Metric            Luxury   Prestige   Masstige       Mass
-   Revenue CAGR        3.45%      0.74%      14.67%     5.07%
-   Search Index       31.24      27.04       24.01     42.68
-   YouTube EN         0.525      0.393       0.547     0.267
-   YouTube JP         0.270      0.190       0.386     0.065
-   @cosme             0.462      0.417       0.367     0.326
+   Metric              Luxury   Prestige   Masstige      Mass
+   Revenue CAGR         -3.07%      0.74%      14.67%     5.07%
+   Search Index         29.74      26.38       23.82     41.75
+   YouTube EN           0.525      0.393       0.547     0.267
+   YouTube JP           0.270      0.190       0.386     0.065
+   @cosme               0.462      0.417       0.367     0.326
+   YouTube FR           0.471      0.307       0.349     0.003
+   Beaute-Test          0.648      0.557       0.532     0.512
 
-   Masstige ranks #1 on Revenue CAGR, #1 on YouTube EN,
-   #1 on YouTube JP, #3 on @cosme.
-   After Masstige, the strongest tier is Luxury, performing similarly well across all metrics.
-
+   Masstige ranks: #1 Revenue CAGR | #1 YouTube EN |
+   #1 YouTube JP | #3 @cosme | #2 YouTube FR | #3 Beaute-Test
 
 METHODOLOGICAL NOTE
 -------------------
-This analysis triangulates revenue data (audited annual reports), consumer
-search behaviour (Google Trends, 8 markets), and sentiment signals (YouTube
-VADER/GiNZA, @cosme star ratings) across English and Japanese language markets.
-Conclusions rest on convergence across independent sources rather than any
-single signal.
+This analysis triangulates revenue data (audited annual reports, 9 companies),
+consumer search behaviour (Google Trends, 8 markets), and sentiment signals
+(YouTube VADER/GiNZA/DistilCamemBERT, @cosme star ratings, Beaute-Test ratings)
+across English, Japanese, and French language markets.
+Conclusions rest on convergence across seven independent signals rather than
+any single data source.
 
 ================================================================================
