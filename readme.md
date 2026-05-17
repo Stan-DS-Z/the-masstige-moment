@@ -27,7 +27,9 @@ The Masstige consumer is **low-browse, high-convert.** Discovery happens through
 communities, and word-of-mouth — not search engines. This is not a weakness; it is a channel signature.
 
 *Nuance:* Established review platforms (@cosme, Beauté-Test) still rank Masstige behind Luxury and Prestige  
-— reflecting a category hierarchy that video sentiment is beginning to erode. **The shift is underway, not complete.**
+by point estimate — though the @cosme Masstige–Prestige and Masstige–Mass gaps are within sampling noise  
+(not statistically significant). This reflects a category hierarchy that video sentiment is beginning to erode.  
+**The shift is underway, not complete.**
 
 ---
 
@@ -39,7 +41,7 @@ communities, and word-of-mouth — not search engines. This is not a weakness; i
 | Google Trends Index | 30 | 26 | **24** | 42 |
 | YouTube Sentiment (EN) | 0.525 | 0.393 | **0.547** | 0.267 |
 | YouTube Sentiment (JP) | 0.270 | 0.190 | **0.386** | 0.065 |
-| @cosme Rating | 0.462 | 0.417 | 0.367 | 0.326 |
+| @cosme Rating | 0.452 | 0.421 | 0.350 | 0.326 |
 | YouTube Sentiment (FR) | 0.471 | 0.307 | 0.349 | 0.003 |
 | Beauté-Test Rating | 0.648 | 0.557 | 0.532 | 0.512 |
 
@@ -60,14 +62,19 @@ Masstige ranks #1 on Revenue CAGR and EN/JP YouTube sentiment. Top 2 in 5 of 7 d
 
 ---
 
-**２．日本市場：クロスソース検証の最高点**  
-YouTube JP（0.386）と@cosme（0.367）のマスティージ・センチメントの差はΔ0.019。  
-感情反応（動画コメント）と購買動機型レビュー（@cosme）という、  
-方法論的に独立した2つのソースがほぼ同一の結論に達した。  
-本プロジェクト全体で最も強力なクロスソース検証結果である。
+**２．日本市場：独立した2ソースが方向で一致**  
+感情反応（動画コメント＝YouTube JP）と購買動機型レビュー（@cosme）という、  
+方法論的に独立した2つのソースが、いずれもマスティージを中位に位置づける。  
+さらに日本は、マスティージで動画シグナルがレビュープラットフォームのスコアを  
+上回る唯一の市場であり、動画・口コミがチャネルを駆動しているという仮説と整合的だ。  
+ただしこれは「方向の一致」であって精密な数値一致ではない——@cosmeのマスティージは  
+小標本（n=103, 95%信頼区間 ±0.09程度）であり、YouTubeのlike加重スコアも区間が広い。
 
-**Japan: the strongest validation in the project.** YouTube JP and @cosme — two methodologically  
-independent sources measuring different phenomena — converge on Masstige sentiment with Δ0.019.
+**Japan: two independent sources agree on direction.** YouTube JP (video comments) and  
+@cosme (purchase-driven reviews) — methodologically independent sources — both place Masstige  
+mid-pack, and Japan is the only market where the video signal outscores the review platform  
+for Masstige. Read this as directional agreement, not a precision match: the @cosme Masstige  
+tier is a small sample (n=103) and the like-weighted YouTube score carries a wide CI.
 
 ---
 
@@ -137,7 +144,7 @@ Masstige_Moment/
 | Stock performance | Yahoo Finance | yfinance API | 2022–2025 |
 | Search trends | Google Trends | pytrends · 8 markets · geo-anchored | 2022–2025 |
 | Sentiment (EN) | YouTube comments | YouTube Data API v3 + VADER | ~7,000 comments |
-| Sentiment (JP) | YouTube + @cosme | YouTube API + GiNZA/Sudachi + star ratings | ~22,000 comments · 2,452 reviews |
+| Sentiment (JP) | YouTube + @cosme | YouTube API + GiNZA/Sudachi + star ratings | ~17,000 comments · 925 reviews |
 | Sentiment (FR) | YouTube + Beauté-Test | YouTube API + DistilCamemBERT + star ratings | ~4,000 comments · 16 brands |
 
 ---
@@ -205,22 +212,6 @@ Run notebooks in order 01 → 05. NB03 requires ~1 hour between full re-runs (py
 
 ---
 
-## 対象読者 / Target Audience
-
-| 対象 | 目的 |
-|------|------|
-| **ブランド戦略チーム**（花王・資生堂・ロレアル ジャパン） | ティア別・市場別の消費者インテリジェンス |
-| **投資・BD機能**（LVMH・ロレアル） | 収益成長シグナルとポートフォリオへの示唆 |
-| **コンサルティング・分析職の採用担当** | エンドツーエンドのプロジェクト構造・多ソース三角検証・仮説駆動型ナラティブ |
-
-| Audience | Purpose |
-|----------|---------|
-| **Brand strategy teams** (Kao, Shiseido, L'Oréal Japan) | Actionable tier and market intelligence |
-| **Investor / BD functions** (LVMH, L'Oréal) | Revenue growth signals and portfolio implications |
-| **Analytics & consulting recruiters** | End-to-end project structure, multi-source triangulation, hypothesis-driven narrative |
-
----
-
 ## データ倫理 / Data Ethics
 
 使用した全データソースは公開情報。YouTubeコメントおよびレビューデータは集計センチメント分析のみに使用。  
@@ -228,6 +219,46 @@ Run notebooks in order 01 → 05. NB03 requires ~1 hour between full re-runs (py
 
 All data sources used are publicly available. Comments and reviews analysed in aggregate for  
 sentiment trends only. No personal identifiers or user profiles stored or redistributed.
+
+---
+
+## 改訂履歴 / Revision History
+
+**2026-05 — クロス監査 / Cross-audit**
+
+A peer review of a sister project (Beauty Pulse, which shares the @cosme and Google Trends  
+data sources) surfaced two sample-size failure modes. Because the projects use those sources  
+differently, a targeted cross-audit was run on Masstige Moment. Findings:
+
+- **@cosme review data contained duplicate rows.** A pagination bug in the NB04B scraper  
+  (`scrape_brand_reviews` re-fetched page 1 when `?page=N` exceeded a brand's real page  
+  count) inflated the raw scrape to 2,454 rows — only **925 were unique reviews** (1,529  
+  duplicates, repeated 2× to 24×). *Corrected:* dedup added to NB04B; `cosme_reviews_raw.*`  
+  and `cosme_sentiment_tier.csv` regenerated. Tier **means moved <0.02** and the tier  
+  ordering held (means of star ratings are unbiased w.r.t. n) — the @cosme @ Masstige score  
+  is now 0.350 (was 0.367). Only the **sample-size figure** was wrong: "2,452 reviews" → 925.
+
+- **"Cross-source convergence Δ0.019" was false precision.** The headline "strongest  
+  validation in the project" rested on YouTube JP (0.386) and @cosme (0.367) landing 0.019  
+  apart. The @cosme Masstige tier is n=103 (95% CI ≈ ±0.09) and the like-weighted YouTube  
+  JP score has a bootstrap 95% CI of ≈[0.24, 0.53]. The Δ is well inside that noise.  
+  *Corrected:* reworded to "two independent sources agree on **direction**" — Masstige is  
+  mid-pack in both, and the only tier where the video signal beats the review platform.  
+  That qualitative pattern is robust; the precise Δ is not.
+
+- **@cosme tier ordering — significance.** Welch t-tests on the (de-duplicated) per-review  
+  scores: Masstige < Luxury is significant (p≈0.05); Masstige vs Prestige (p≈0.16) and  
+  Masstige vs Mass (p≈0.67) are **not**. The tier ranking is a point-estimate ordering;  
+  adjacent gaps around Masstige are within sampling noise. Stated as such in the nuance line.
+
+- **Checked clean — no action needed.** Google Trends data (`trends_raw.pkl`,  
+  `trends_fr_raw.pkl`) has **no duplicate rows** and no "crossover / overtook" overclaim —  
+  the README correctly frames Masstige search as *low* (index 24) and never claims a  
+  reversal. The 14.67% revenue CAGR (audited annual reports, NB01) is untouched and robust.
+
+*Note: synthesis charts (`05_synthesis_scorecard.png`, `05_radar_chart.png`,  
+`04b_cosme_yt_dumbbell*.png`) should be regenerated on the next NB04B→NB05 run; the visual  
+shift from the @cosme correction is below line width.*
 
 ---
 

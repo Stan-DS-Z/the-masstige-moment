@@ -18,7 +18,7 @@ structurally strongest tier of the post-COVID beauty landscape.
 The consumer is buying without necessarily searching -- driven by word-of-mouth,
 pharmacist recommendation, and channel trust rather than top-of-funnel discovery.
 
-Nuance: On established review platforms (@cosme #3, Beaute-Test #3), Masstige sits behind Luxury and Prestige -- reflecting category hierarchy that video sentiment is beginning to erode. The shift is underway, not complete.
+Nuance: On established review platforms (@cosme #3, Beaute-Test #3), Masstige sits behind Luxury and Prestige by point estimate -- though the Masstige-Prestige and Masstige-Mass @cosme gaps are within sampling noise (not statistically significant). This reflects a category hierarchy that video sentiment is beginning to erode. The shift is underway, not complete.
 
 KEY FINDINGS
 ------------
@@ -40,10 +40,14 @@ KEY FINDINGS
    consumers treat these as categorically different products, not adjacent price points.
 
 4. CONSUMER SENTIMENT -- JAPANESE MARKET (NB04B)
-   YouTube JP: Masstige 0.386 | @cosme: 0.367
-   Cross-source convergence D0.019 -- strongest methodological
-   validation in the project. Masstige is the only tier where YouTube
-   outscores @cosme, confirming video content as a primary channel driver.
+   YouTube JP: Masstige 0.386 | @cosme: 0.350
+   Two methodologically independent sources agree on direction: both place
+   Masstige mid-pack, and Japan is the only market where the video signal
+   exceeds the review-platform score for Masstige -- consistent with video and
+   word-of-mouth as a primary channel driver. Read this as directional
+   agreement, not a precision match: the @cosme Masstige tier is a small sample
+   (n=103) and the like-weighted YouTube score carries a wide
+   confidence interval. (@cosme reviews de-duplicated in the 2026-05 cross-audit.)
 
 5. CONSUMER SENTIMENT -- FRENCH MARKET (NB04C)
    YouTube FR: Luxe leads sentiment (0.471), Mass collapses to 0.003
@@ -62,7 +66,7 @@ CROSS-SOURCE SCORECARD
    Search Index         29.74      26.38       23.82     41.75
    YouTube EN           0.525      0.393       0.547     0.267
    YouTube JP           0.270      0.190       0.386     0.065
-   @cosme               0.462      0.417       0.367     0.326
+   @cosme               0.452      0.421       0.350     0.326
    YouTube FR           0.471      0.307       0.349     0.003
    Beaute-Test          0.648      0.557       0.532     0.512
 
@@ -77,5 +81,9 @@ consumer search behaviour (Google Trends, 8 markets), and sentiment signals
 across English, Japanese, and French language markets.
 Conclusions rest on convergence across seven independent signals rather than
 any single data source.
+Cross-audit (2026-05): @cosme review data was de-duplicated -- a pagination
+re-scrape had inflated the raw row count ~2.65x (2,454 rows -> 925 unique
+reviews). Tier means shifted <0.02 and the tier ordering held; only the
+sample-size figure changed. See REVISION HISTORY in README.
 
 ================================================================================
